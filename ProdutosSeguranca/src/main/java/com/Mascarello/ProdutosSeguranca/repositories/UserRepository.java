@@ -4,7 +4,9 @@ import com.Mascarello.ProdutosSeguranca.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 
-public interface UserRepository extends JpaRepository<User,Long> {
+import java.util.UUID;
+
+public interface UserRepository extends JpaRepository<User, UUID> {
 
     UserDetails findByLogin(String role);
 }
